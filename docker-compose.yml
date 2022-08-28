@@ -1,0 +1,17 @@
+version: "3.7"
+
+networks:
+  fixed_compose_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.24.1.0/24
+
+services:
+  miniconda3:
+    image: "docker_miniconda3"
+    container_name: "miniconda3"
+    build: "./conda_ml/"
+    networks:
+      fixed_compose_network:
+        ipv4_address: 172.24.1.2
