@@ -1,5 +1,5 @@
 # pytorch_docker
-docker環境でpython3+jupyter-labが動作する環境です。
+python3+jupyter-labが動作するdocker環境です。docker本体のインストールは含みません。
 
 ## Software Version
 ※開発用環境のためバージョン指定していません
@@ -13,7 +13,7 @@ docker環境でpython3+jupyter-labが動作する環境です。
 - jupyterlab_widgets
 - ipywidgets
 - import-ipynb
-- 
+
 ### 機械学習関連    
 - torch
 - torchvision
