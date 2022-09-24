@@ -29,6 +29,8 @@ python3+jupyter-labが動作するdocker環境です。docker本体のインス�
 - torchcam
 - torchsummary
 - grad-cam
+- mecab-python3
+- unidic-lite
 - fugashi
 - ipadic
 - numpy
