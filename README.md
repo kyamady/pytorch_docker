@@ -2,7 +2,7 @@
 python3+jupyter-labが動作するdocker環境です。docker本体のインストールは含みません。
 
 ## Software Version
-※開発用環境のためバージョン指定していません
+※開発用環境のためバージョン指定していません。
 
 ### jupyter-lab関連
 - black
