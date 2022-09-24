@@ -1,7 +1,36 @@
 # pytorch_docker
 python3+jupyter-labが動作するdocker環境です。docker本体のインストールは含みません。
 
-## Software Version
+## 構築手順
+### 0. 事前準備
+- このリポジトリをcloneする
+- dockerをインストールしておく
+- (MacOSの場合はHomebrew経由) brew install docker
+
+### 1.　コンテナ起動
+```
+docker-compose up -d
+```
+
+### 2. jupyter起動
+ブラウザで下記にアクセス
+```
+http://localhost:8888/
+```
+
+### 3. volumesのマウント
+cloneしたリポジトリの
+```
+pytorch_docker/workspace
+```
+が、起動したコンテナの
+```
+/workspace
+```
+にマウントされます。
+jupyterから保存したノートブックは上記のディレクトリに保存されるので、コンテナを止めても残ります。
+
+## Install Packages 
 ※開発用環境のためバージョン指定していません。
 
 ### jupyter-lab関連
