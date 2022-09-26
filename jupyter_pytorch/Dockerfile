@@ -1,18 +1,24 @@
 FROM python:3.9.7-buster
 ARG DEBIAN_FRONTEND=noninteractive
 
-# image initialize
-RUN apt-get update && apt-get install -y tzdata \
+# container-image initialize
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install -y libgl1-mesa-dev
+RUN apt-get install -y tzdata \
 &&  ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
 &&  apt-get clean \
 &&  rm -rf /var/lib/apt/lists/* \
 &&  mkdir -p /root/.jupyter \
 &&  mkdir -p /workspace
-
 ENV TZ=Asia/Tokyo
 
-# pip install
-RUN python3 -m pip install --upgrade pip
+# install node.js & npm & n
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install -y nodejs
+RUN apt-get install -y npm
+RUN npm install n -g \
+&& n stable \
+&& ln -sf /usr/local/bin/node /usr/bin/node
 
 # pip install jupyter-lab
 RUN python3 -m pip install --upgrade pip \
@@ -24,7 +30,9 @@ RUN python3 -m pip install --upgrade pip \
     lckr-jupyterlab-variableinspector \
     jupyterlab_widgets \
     ipywidgets \
-    import-ipynb
+    import-ipynb \
+    jupyterlab-vim \
+    ipympl
 
 # pip install pytorch and more...
 RUN python3 -m pip install --upgrade pip \
