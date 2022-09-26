@@ -2,7 +2,7 @@
 - python3でjupyter-labが動作するdocker環境です。docker本体のインストールは含みません。
 - jupyter-labでextensionを追加できるようにnode.js+npmも入っています。（コンテナ上でエクステンション永続化はできないので、必要ならライブラリで入れる）
 
-## 入っているもの　　※pythonのインストールライブラリの一覧は最後に記載
+## 入っているもの　　※pipのpkg一覧は最後に記載
 - python3とnode.js
 - jupyter-lab (テキストエディタはkey-mapをvimに変更)
 - numpy,pandas,scikit-leranなど機械学習用のベース
