@@ -1,6 +1,13 @@
 # pytorch_docker
-python3+jupyter-labが動作するdocker環境です。docker本体のインストールは含みません。
-jupyter-labでextensionを追加できるようにnode.js+npmも入っています。
+python3でjupyter-labが動作するdocker環境です。docker本体のインストールは含みません。jupyter-labでextensionを追加できるようにnode.js+npmも入っています。（コンテナ上でエクステンション永続化はできないので、必要ならライブラリで入れる）
+
+## 入っているもの　　※pythonのインストールライブラリの一覧は最後に記載
+- python3とnode.js
+- jupyter-lab (テキストエディタはkey-mapをvimに変更)
+- numpy,pandas,scikit-leranなど機械学習用のベース
+- NN系としてpytorch
+- 画像処理系ライブラリ
+- 自然言語処理系ライブラリ
 
 ## 構築手順
 ### 0. 事前準備
