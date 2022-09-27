@@ -18,7 +18,7 @@
 
 ### 1.　コンテナ起動
 ```
-docker-compose up -d
+rebuild_restart.sh
 ```
 
 ### 2. jupyter起動
