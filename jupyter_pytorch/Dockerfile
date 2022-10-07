@@ -141,12 +141,12 @@ RUN python3 -m pip install --upgrade pip \
     tinycss2==1.1.1 \
     tokenizers==0.12.1 \
     tomli==2.0.1 \
-    torch==1.12.1 \
-    torchaudio==0.12.1 \
+    torch \
+    torchaudio \
     torchcam==0.3.0 \
     torchsummary==1.5.1 \
     torchtext==0.13.1 \
-    torchvision==0.10.0 \
+    torchvision \
     tornado==6.2 \
     tqdm==4.64.1 \
     traitlets==5.4.0 \
